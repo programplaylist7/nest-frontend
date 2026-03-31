@@ -11,7 +11,7 @@ const Profile = () => {
   // comment: logout function
   const handleLogout = async () => {
     try {
-      await axios.get("${import.meta.env.VITE_BACKEND_URL}/auth/logout", {
+      await axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/logout`, {
         withCredentials: true,
       });
 

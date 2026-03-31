@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   // comment: check login on app start (refresh API)
   const checkAuth = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_BACKEND_URL}/auth/refresh", {
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/auth/refresh`, {
         withCredentials: true,
       });
 

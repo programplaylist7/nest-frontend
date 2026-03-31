@@ -28,7 +28,7 @@ const MasterPanel = ({ role }) => {
 
     try {
       await axios.post(
-        "${import.meta.env.VITE_BACKEND_URL}/master/add",
+        `${import.meta.env.VITE_BACKEND_URL}/master/add`,
         { type, name },
         { withCredentials: true },
       );

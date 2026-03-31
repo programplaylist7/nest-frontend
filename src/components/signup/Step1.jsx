@@ -12,7 +12,7 @@ const Step1 = ({ setStep, formData, setFormData }) => {
   // comment: fetch countries on mount
   const fetchCountries = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_BACKEND_URL}/country");
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/country`);
       setCountries(res.data);
     } catch (err) {
       console.log(err);
@@ -44,7 +44,7 @@ const Step1 = ({ setStep, formData, setFormData }) => {
     }
 
     try {
-      const res = await axios.post("${import.meta.env.VITE_BACKEND_URL}/auth/check-email", {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/check-email`, {
         email,
       });
 
@@ -167,7 +167,7 @@ const Step1 = ({ setStep, formData, setFormData }) => {
       });
 
       const res = await axios.post(
-        "${import.meta.env.VITE_BACKEND_URL}/auth/signup-step1",
+        `${import.meta.env.VITE_BACKEND_URL}/auth/signup-step1`,
         form,
       );
 

@@ -41,7 +41,7 @@ const Login = () => {
     try {
       // comment: call backend (with cookie support)
 
-      const res = await axios.post("${import.meta.env.VITE_BACKEND_URL}/auth/login", form, {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, form, {
         withCredentials: true,
       });
 

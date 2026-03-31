@@ -37,8 +37,8 @@ const Step2 = ({ setStep, formData }) => {
   const fetchDropdowns = async () => {
     try {
       const [qRes, dRes] = await Promise.all([
-        axios.get("${import.meta.env.VITE_BACKEND_URL}/qualification"),
-        axios.get("${import.meta.env.VITE_BACKEND_URL}/designation"),
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/qualification`),
+        axios.get(`${import.meta.env.VITE_BACKEND_URL}/designation`),
       ]);
 
       setQualifications(qRes.data);
@@ -95,7 +95,7 @@ const Step2 = ({ setStep, formData }) => {
         form.append("resume", resume);
       }
 
-      await axios.post("${import.meta.env.VITE_BACKEND_URL}/auth/signup-step2", form, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/auth/signup-step2`, form, {
         withCredentials: true,
       });
 
